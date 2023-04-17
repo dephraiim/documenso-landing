@@ -2,11 +2,16 @@
 import { Logo } from "@/components/Logo";
 import { Star } from "@/components/Star";
 import { Github, PackageOpen, Puzzle, Search, ShieldCheckIcon, Slack, Twitter } from "lucide-react";
+import Head from "next/head";
 import React from "react";
+import { RoughNotation } from "react-rough-notation";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Documenso</title>
+      </Head>
       <header role="banner" className="ui-section-header">
         <div className="ui-layout-container">
           <div className="ui-section-header__layout ui-layout-flex">
@@ -27,11 +32,21 @@ export default function Home() {
       <main role="main">
         <section className="ui-section-hero">
           <div className="ui-layout-container">
-            <div className="ui-layout-column-6 ui-layout-column-center">
-              <h1 className="font-bold">The Open Source DocuSign Alternative.</h1>
-              <p className="ui-text-intro">
-                Our goal at Documenso is to establish ourselves as the most reliable document
-                signing solution globally.
+            <div className="ui-layout-column-center">
+              <h1 className="font-bold">
+                The{" "}
+                <RoughNotation type="underline" show animate strokeWidth={4}>
+                  Open Source
+                </RoughNotation>{" "}
+                DocuSign Alternative.
+              </h1>
+              <p className="ui-layout-column-6 ui-layout-column-center ui-text-intro">
+                Our goal at{"  "}
+                <RoughNotation type="underline" show animate animationDelay={800}>
+                  <span className="mx-1">Documenso</span>
+                </RoughNotation>
+                {"  "}
+                is to establish ourselves as the most reliable document signing solution globally.
               </p>
 
               <div className="ui-component-cta ui-layout-flex">
